@@ -12,27 +12,25 @@ function Search() {
   };
 
   return (
-    // Conteneur principal avec fond vert et contenu centré
     <div className="flex flex-col items-center justify-center w-screen h-screen bg-green-700 px-4">
-      
-      {/* Header simple avec le nom de l'app */}
+      {/* Header */}
       <header className="absolute top-0 left-0 px-8 py-4">
         <span className="text-2xl font-bold text-white">InfoGo</span>
       </header>
 
-      {/* Titre principal */}
+      {/* Title */}
       <h1 className="text-6xl font-extrabold mb-8 text-white drop-shadow-xl">
         InfoGo
       </h1>
 
-      {/* Barre de recherche */}
+      {/* Search Bar */}
       <form
         onSubmit={handleSubmit}
-        className="flex items-center w-full max-w-lg bg-white rounded-full px-5 py-3 shadow-lg transition-transform hover:scale-105"
+        className="flex items-center w-full max-w-lg bg-white rounded-full px-3 py-2 shadow-lg transition-transform hover:scale-105"
       >
-        {/* Icône loupe */}
+        {/* Icon */}
         <svg
-          className="h-6 w-6 mr-3 text-green-900"
+          className="h-6 w-6 mr-2 text-green-900"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
@@ -45,7 +43,7 @@ function Search() {
           <path d="M21 21l-4.3-4.3" />
         </svg>
 
-        {/* Champ de saisie */}
+        {/* Input */}
         <input
           type="text"
           className="flex-1 outline-none text-lg text-gray-700 placeholder-gray-400 bg-transparent"
@@ -53,9 +51,17 @@ function Search() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
+
+        {/* Submit Button */}
+         <button
+  type="submit"
+  className=" text-gray-700  "
+>
+          Submit
+        </button>
       </form>
 
-      {/* Section citations */}
+      {/* Quotes */}
       <div className="mt-12 p-6 rounded-xl bg-gray-800 shadow-xl max-w-3xl text-center">
         <div className="space-y-4">
           <p className="text-white text-xl italic font-medium opacity-90">
